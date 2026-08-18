@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Ponto</title>
+    <link rel="stylesheet" href="staley.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>📋 Controle de Ponto</h1>
+
+        <div class="info-tempo">
+            <h3 id="data">Data</h3>
+            <h3 id="hora">Hora</h3>
+            <h3 id="dia">Dia</h3>
+            <h3 id="mensagem">Mensagem</h3>
+        </div>
+
+        <hr>
+
+        <h2>📷 Foto</h2>
+
+        <video id="Camera" autoplay muted playsinline></video>
+
+        <div class="botoes-camera">
+            <button class="btn-abrir" onclick="abrirCamera()">Abrir câmera</button>
+            <button class="btn-tirar" onclick="capturarFoto()">Tirar foto</button>
+            <button class="btn-fechar" onclick="fecharCamera()">Fechar câmera</button>
+        </div>
+
+        <canvas id="foto"></canvas>
+
+        <hr>
+
+        <h2>🕘 Bater Ponto</h2>
+
+        <select id="tipo">
+            <option value="Entrada">Entrada</option>
+            <option value="Início do almoço">Início do almoço</option>
+            <option value="Volta do almoço">Volta do almoço</option>
+            <option value="Saída">Saída</option>
+        </select>
+
+        <textarea id="textoMensagem" placeholder="Digite uma mensagem (opcional)..."></textarea>
+
+        <button class="btn-ponto" onclick="baterPonto()">🕘 BATER PONTO</button>
+
+        <div id="registro"></div>
+
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
